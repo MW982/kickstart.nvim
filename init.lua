@@ -995,15 +995,15 @@ harpoon:setup()
 
 vim.keymap.set('n', '<leader>a', function()
   harpoon:list():prepend()
-end)
+end, { desc = 'Prepend current file' })
 
 vim.keymap.set('n', '<leader>x', function()
   harpoon:list():remove()
-end)
+end, { desc = 'Remove harpoon file' })
 
 vim.keymap.set('n', '<leader>E', function()
   harpoon.ui:toggle_quick_menu(harpoon:list())
-end)
+end, { desc = 'List harpoon files' })
 
 -- Add line numbers to netrw
 vim.g.netrw_bufsettings = 'noma nomod nu rnu nobl nowrap ro'
